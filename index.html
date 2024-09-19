@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pets-R-Us | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add font awesome for icons (optional) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <!-- Side Navigation -->
+    <aside>
+        <div class="logo">
+            <h1>Pets-R-Us</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#" id="loginBtn">Login/Sign Up</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to Pets-R-Us</h2>
+                <p>Discover our new dog grooming, training, and boarding services!</p>
+                <a href="#" class="btn" id="appointmentBtn">Schedule an Appointment</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <div class="tabs">
+                <button class="tab-link active" data-tab="grooming">Grooming</button>
+                <button class="tab-link" data-tab="training">Training</button>
+                <button class="tab-link" data-tab="boarding">Boarding</button>
+            </div>
+            <div class="tab-content active" id="grooming">
+                <img src="https://via.placeholder.com/600x400" alt="Grooming Service">
+                <p>Make your pet shine with our professional grooming services.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="tab-content" id="training">
+                <img src="https://via.placeholder.com/600x400" alt="Training Service">
+                <p>Expert training programs for dogs of all ages.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="tab-content" id="boarding">
+                <img src="https://via.placeholder.com/600x400" alt="Boarding Service">
+                <p>A comfortable home away from home for your pet.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial">
+                    <p>"Pets-R-Us transformed my dog's behavior!"</p>
+                    <h4>- Happy Customer</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Best grooming services in town."</p>
+                    <h4>- Satisfied Pet Owner</h4>
+                </div>
+                <!-- Additional testimonials can be added here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Appointment Button -->
+    <a href="#" class="floating-btn" id="appointmentBtnFloating">Schedule Appointment</a>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button appointment-close">&times;</span>
+            <h2>Schedule an Appointment</h2>
+            <form>
+                <label for="service-select">Select Service:</label>
+                <select id="service-select">
+                    <option value="grooming">Grooming</option>
+                    <option value="training">Training</option>
+                    <option value="boarding">Boarding</option>
+                </select>
+
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Select Time:</label>
+                <input type="time" id="time" required>
+
+                <label for="pet-select">Select Pet:</label>
+                <select id="pet-select">
+                    <option value="new">Add New Pet</option>
+                    <!-- User's pets would be listed here -->
+                </select>
+
+                <!-- Add Pet Form (hidden by default) -->
+                <div id="add-pet-form" style="display: none;">
+                    <h3>Add New Pet</h3>
+                    <label for="pet-name">Pet Name:</label>
+                    <input type="text" id="pet-name">
+
+                    <label for="pet-breed">Breed:</label>
+                    <input type="text" id="pet-breed">
+
+                    <label for="pet-age">Age:</label>
+                    <input type="number" id="pet-age" min="0">
+
+                    <label for="pet-notes">Notes:</label>
+                    <textarea id="pet-notes" rows="3"></textarea>
+                </div>
+
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Login/Sign-Up Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button login-close">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalTitle">Login to Your Account</h2>
+            </div>
+            <div class="modal-body">
+                <!-- Tabs for Login and Sign-Up -->
+                <div class="tab-container">
+                    <button class="tab-link active" data-tab="login">Login</button>
+                    <button class="tab-link" data-tab="signup">Sign Up</button>
+                </div>
+                <!-- Login Form -->
+                <div class="tab-content active" id="login">
+                    <form>
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" required>
+
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" required>
+
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <!-- Sign-Up Form -->
+                <div class="tab-content" id="signup">
+                    <form>
+                        <label for="signup-name">Name:</label>
+                        <input type="text" id="signup-name" required>
+
+                        <label for="signup-email">Email:</label>
+                        <input type="email" id="signup-email" required>
+
+                        <label for="signup-password">Password:</label>
+                        <input type="password" id="signup-password" required>
+
+                        <label for="signup-confirm-password">Confirm Password:</label>
+                        <input type="password" id="signup-confirm-password" required>
+
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Optional) -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pets-R-Us. All rights reserved.</p>
+            <!-- Additional footer content can be added here -->
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

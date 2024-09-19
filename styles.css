@@ -1,0 +1,385 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Side Navigation */
+aside {
+    width: 200px;
+    background-color: #ffcc00;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+nav a#loginBtn {
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    margin-left: 200px;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffefcc;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.hero-content .btn:hover {
+    background-color: #e6b800;
+}
+
+/* Services Section */
+.services {
+    margin: 40px 0;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.tabs {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab-link.active,
+.tab-link:hover {
+    background-color: #e6b800;
+}
+
+.tab-content {
+    display: none;
+    text-align: center;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.tab-content .btn {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.tab-content .btn:hover {
+    background-color: #e6b800;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #ffefcc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.testimonial-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.testimonial {
+    min-width: 300px;
+    margin: 0 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+
+.testimonial p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Floating Appointment Button */
+.floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.floating-btn:hover {
+    background-color: #e6b800;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 200px; /* Adjusted for side navigation */
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Tab Container in Modal */
+.tab-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.tab-link.active,
+.tab-link:hover {
+    background-color: #ffcc00;
+    color: #333;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.modal-body form {
+    margin-top: 20px;
+}
+
+.modal-body label {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+}
+
+.modal-body input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.modal-body button {
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    background-color: #ffcc00;
+    color: #333;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-body button:hover {
+    background-color: #e6b800;
+}
+
+/* Appointment Modal Form */
+.modal-content form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.modal-content form input,
+.modal-content form select,
+.modal-content form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.modal-content form button {
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    background-color: #ffcc00;
+    color: #333;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-content form button:hover {
+    background-color: #e6b800;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    aside {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .tab-content img {
+        width: 100%;
+    }
+
+    .testimonial-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+}
